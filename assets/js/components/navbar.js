@@ -10,12 +10,12 @@ async function loadNavbar() {
             </a>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="/" class="nav-link">Home</a></li>
-                <li><a href="/about.html" class="nav-link">About</a></li>
-                <li><a href="/services.html" class="nav-link">Services</a></li>
-                <li><a href="/tours.html" class="nav-link">Tours</a></li>
-                <li><a href="/gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="../pages/about.html" class="nav-link">About</a></li>
+                <li><a href="../pages/services.html" class="nav-link">Services</a></li>
+                <li><a href="../pages/tours.html" class="nav-link">Tours</a></li>
+                <li><a href="../pages/gallery.html" class="nav-link">Gallery</a></li>
                 <li><a href="/testimonials.html" class="nav-link">Testimonials</a></li>
-                <li><a href="/contact.html" class="nav-link">Contact</a></li>
+                <li><a href="../pages/contact.html" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span></span>

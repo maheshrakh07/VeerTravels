@@ -16,12 +16,12 @@ async function loadFooter() {
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="/index.html">Home</a></li>
-                        <li><a href="/assets/pages/about.html">About Us</a></li>
-                        <li><a href="/assets/pages/services.html">Services</a></li>
-                        <li><a href="/assets/pages/tours.html">Tours</a></li>
-                        <li><a href="/assets/pages/gallery.html">Gallery</a></li>
-                        <li><a href="/assets/pages/testimonials.html">Testimonials</a></li>
-                        <li><a href="/assets/pages/contact.html">Contact</a></li>
+                        <li><a href="/pages/about.html">About Us</a></li>
+                        <li><a href="/pages/services.html">Services</a></li>
+                        <li><a href="/pages/tours.html">Tours</a></li>
+                        <li><a href="/pages/gallery.html">Gallery</a></li>
+                        <li><a href="/pages/testimonials.html">Testimonials</a></li>
+                        <li><a href="/pages/contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
