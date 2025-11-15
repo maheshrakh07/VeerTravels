@@ -1,0 +1,267 @@
+/* Main CSS - Global Styles */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-orange: #FF9933;
+    --primary-green: #2D5F3F;
+    --accent-green: #3A7A4E;
+    --light-cream: #FFF8F0;
+    --pure-white: #FFFFFF;
+    --text-dark: #2C2C2C;
+    --text-light: #666666;
+    --shadow-soft: 0 4px 20px rgba(45, 95, 63, 0.1);
+    --shadow-hover: 0 8px 30px rgba(45, 95, 63, 0.2);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--pure-white);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Sections */
+.section {
+    padding: 80px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-green);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--primary-orange);
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+    40% { transform: translateY(-10px) translateX(-50%); }
+    60% { transform: translateY(-5px) translateX(-50%); }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7);
+    }
+}
+
+@keyframes pulseReviews {
+    0%, 100% {
+        box-shadow: 0 4px 20px rgba(255, 193, 7, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 30px rgba(255, 193, 7, 0.7);
+    }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.5); }
+    to { transform: scale(1); }
+}
+
+/* Floating Buttons */
+.whatsapp-float {
+    position: fixed;
+    text-decoration: none;
+    bottom: 30px;
+    right: 30px;
+    background: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    z-index: 999;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+}
+
+.reviews-float {
+    position: fixed;
+    bottom: 110px;
+    right: 30px;
+    background: linear-gradient(135deg, #FFC107, #FF9800);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 4px 20px rgba(255, 193, 7, 0.4);
+    z-index: 999;
+    transition: all 0.3s ease;
+    animation: pulseReviews 2s infinite;
+}
+
+.reviews-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(255, 193, 7, 0.6);
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 190px;
+    right: 30px;
+    background: var(--primary-orange);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.scroll-top.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    background: var(--primary-green);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .reviews-float {
+        bottom: 110px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+    }
+
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+    }
+
+    .scroll-top {
+        right: 20px;
+        bottom: 190px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 600px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .reviews-float {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        bottom: 100px;
+    }
+
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 1.7rem;
+    }
+
+    .scroll-top {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        bottom: 165px;
+    }
+}
+
+/* Performance optimization for animations */
+.reduce-motion * {
+    animation: none !important;
+    transition: none !important;
+}

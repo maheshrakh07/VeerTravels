@@ -1,0 +1,235 @@
+/* Contact Page Specific Styles */
+
+/* Page Header */
+.contact-header {
+    min-height: 50vh;
+    background: linear-gradient(rgba(45, 95, 63, 0.7), rgba(255, 153, 51, 0.4)),
+                url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&amp;h=1080&amp;fit=crop') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: white;
+    padding: 120px 20px 60px;
+}
+
+/* Contact Info Section */
+.contact-info {
+    background: var(--light-cream);
+}
+
+/* Map Section */
+.map-section {
+    background: white;
+}
+
+.map-container {
+    margin-top: 40px;
+    box-shadow: var(--shadow-soft);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    display: block;
+}
+
+/* Social Section */
+.social-section {
+    background: var(--light-cream);
+}
+
+/* Quick Actions Section */
+.quick-actions {
+    background: white;
+}
+
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.action-card {
+    background: var(--light-cream);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-dark);
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.action-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary-orange);
+}
+
+.action-card i {
+    font-size: 3rem;
+    color: var(--primary-orange);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.action-card h3 {
+    font-size: 1.3rem;
+    color: var(--primary-green);
+    margin-bottom: 10px;
+}
+
+.action-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* Contact Form Styles (if needed in future) */
+.contact-form {
+    max-width: 600px;
+    margin: 50px auto 0;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-soft);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--light-cream);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-orange);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-submit {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.form-submit button {
+    padding: 15px 50px;
+    background: var(--primary-orange);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-soft);
+}
+
+.form-submit button:hover {
+    background: var(--primary-green);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Business Hours */
+.business-hours {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 40px;
+    box-shadow: var(--shadow-soft);
+}
+
+.business-hours h3 {
+    color: var(--primary-green);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hours-list {
+    list-style: none;
+}
+
+.hours-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--light-cream);
+}
+
+.hours-list li:last-child {
+    border-bottom: none;
+}
+
+.hours-day {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.hours-time {
+    color: var(--text-light);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .actions-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .map-container iframe {
+        height: 350px;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-header {
+        min-height: 40vh;
+        padding: 100px 20px 40px;
+    }
+
+    .actions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container iframe {
+        height: 300px;
+    }
+
+    .contact-form {
+        padding: 30px 20px;
+    }
+
+    .action-card {
+        padding: 30px 20px;
+    }
+
+    .action-card i {
+        font-size: 2.5rem;
+    }
+}

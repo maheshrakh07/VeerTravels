@@ -1,0 +1,122 @@
+/* Services Page Specific Styles */
+
+/* Page Header */
+.services-header {
+    min-height: 50vh;
+    background: linear-gradient(rgba(45, 95, 63, 0.7), rgba(255, 153, 51, 0.4)),
+                url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1920&amp;h=1080&amp;fit=crop') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: white;
+    padding: 120px 20px 60px;
+}
+
+/* Services Section */
+.services {
+    background: white;
+}
+
+/* Why Choose Us Section */
+.why-choose {
+    background: var(--light-cream);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.feature-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, var(--primary-orange), var(--primary-green));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-icon i {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    color: var(--primary-green);
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Service Details Enhancement */
+.service-card {
+    cursor: default;
+}
+
+.service-card p {
+    margin-bottom: 15px;
+}
+
+/* CTA Section */
+.contact-cta {
+    background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
+    color: white;
+}
+
+.contact-cta .section-title {
+    color: white;
+}
+
+.contact-cta .section-title::after {
+    background: var(--primary-orange);
+}
+
+.contact-cta .section-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .services-header {
+        min-height: 40vh;
+        padding: 100px 20px 40px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        padding: 30px 20px;
+    }
+}
