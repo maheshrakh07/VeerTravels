@@ -7,7 +7,7 @@ async function loadFooter() {
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Prashant Tours & Travels</h3>
+                    <h3>Veer Tours & Travels</h3>
                     <p>Your Trusted Travel Partner Since 1988</p>
                     <p style="margin-top: 15px;"><i class="fas fa-map-marker-alt"></i> Nashik, Maharashtra, India</p>
                     <p style="margin-top: 10px;">Creating unforgettable travel memories for over 35 years</p>
@@ -46,7 +46,7 @@ async function loadFooter() {
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Prashant Tours & Travels. All rights reserved. | Your Travel Companion Since 1988</p>
+                <p>&copy; 2025 Veer Tours & Travels. All rights reserved. | Your Travel Companion Since 1988</p>
             </div>
         </div>
     </footer>
@@ -218,7 +218,7 @@ async function init() {
     // Update footer year
     setTimeout(updateFooterYear, 100);
     
-    console.log('Prashant Tours & Travels - Website Loaded Successfully');
+    console.log('Veer Tours & Travels - Website Loaded Successfully');
     console.log('Your Trusted Travel Partner Since 1988');
 }
 
