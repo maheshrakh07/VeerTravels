@@ -370,3 +370,187 @@
 /* small helpers */
 .tl-muted { color: var(--tl-muted); font-size: 14px; }
     
+
+/* Navbar (static, responsive, pure CSS) - namespace: pt- */
+:root{
+  --pt-nav-bg: #ffffff;
+  --pt-nav-height: 72px;
+  --pt-green: #2f6f4e;
+  --pt-accent: #ff9a2a;
+  --pt-muted: #6b7280;
+  --pt-radius: 10px;
+  --pt-container-max: 1180px;
+  --pt-z: 110;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+/* container helper (optional if you already have .container) */
+.pt-nav .container { max-width: var(--pt-container-max); margin: 0 auto; padding: 0 20px; }
+
+/* NAV wrapper */
+.pt-nav {
+  position: sticky;
+  top: 0;
+  z-index: var(--pt-z);
+  background: var(--pt-nav-bg);
+  box-shadow: 0 6px 20px rgba(11,30,24,0.04);
+  backdrop-filter: blur(6px);
+}
+
+/* inner layout */
+.pt-nav__wrap {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height: var(--pt-nav-height);
+}
+
+/* brand / logo */
+.pt-nav__brand {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color:var(--pt-green);
+  font-weight:800;
+}
+.pt-nav__logo{ width:44px; height:44px; object-fit:contain; display:block; }
+.pt-nav__title{ font-size:18px; letter-spacing:-0.2px; }
+
+/* nav menu (desktop) */
+.pt-nav__menu{
+  list-style:none;
+  display:flex;
+  gap:18px;
+  align-items:center;
+  margin:0;
+  padding:0;
+}
+.pt-nav__item{ display:inline-block; }
+.pt-nav__link{
+  text-decoration:none;
+  color:var(--pt-green);
+  padding:8px 10px;
+  border-radius:8px;
+  font-weight:600;
+  font-size:15px;
+}
+.pt-nav__link:hover,
+.pt-nav__link:focus{
+  background: linear-gradient(90deg, rgba(47,111,78,0.06), rgba(47,111,78,0.03));
+  outline: none;
+  color:var(--pt-green);
+}
+
+/* action button in nav */
+.pt-nav__action { margin-left:6px; }
+.pt-btn{
+  display:inline-block;
+  text-decoration:none;
+  padding:8px 16px;
+  border-radius:28px;
+  font-weight:700;
+  font-size:14px;
+}
+.pt-btn--primary{ background: linear-gradient(90deg,var(--pt-accent), #ff7b2a); color:#fff; box-shadow:0 12px 36px rgba(255,123,42,0.12); }
+
+/* hamburger toggle (checkbox) hidden on desktop */
+.pt-nav__toggle{
+  position:absolute;
+  opacity:0;
+  pointer-events:none;
+  width:0; height:0;
+}
+
+/* burger label */
+.pt-nav__hamburger{
+  display:none; /* shown on mobile via media query */
+  width:44px;
+  height:44px;
+  border-radius:10px;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+.pt-nav__hamburger span{
+  display:block;
+  width:20px;
+  height:2px;
+  background:var(--pt-green);
+  margin:3px 0;
+  border-radius:2px;
+  transition: transform .22s cubic-bezier(.2,.9,.2,1), opacity .18s;
+}
+
+/* mobile layout */
+@media (max-width: 980px) {
+  .pt-nav__hamburger{ display:flex; }
+  .pt-nav__menu{
+    position: fixed;
+    top: var(--pt-nav-height);
+    right: 14px;
+    width: calc(100% - 28px);
+    max-width: 360px;
+    background: #fff;
+    border-radius: 12px;
+    flex-direction: column;
+    gap: 0;
+    padding: 8px;
+    box-shadow: 0 18px 44px rgba(2,6,23,0.08);
+    transform: translateY(-8px) scale(.99);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .22s ease, opacity .22s ease;
+  }
+  .pt-nav__item{ width:100%; }
+  .pt-nav__link{
+    display:block;
+    padding:14px 16px;
+    color:var(--pt-green);
+    border-radius:8px;
+  }
+  .pt-nav__action{ padding:12px; display:flex; justify-content:center; }
+  .pt-nav__menu .pt-btn--primary{ width:100%; }
+
+  /* When toggle checked — show menu */
+  .pt-nav__toggle:checked ~ .pt-nav__hamburger { /* animate burger to X */
+    /* rotate lines via sibling selector can't target spans inside label directly, so animate using adjacent label styles below */
+  }
+  /* Show menu when checked */
+  .pt-nav__toggle:checked ~ .pt-nav__menu {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* animate hamburger lines (checkbox + label sibling) */
+  /* we use the sibling label after input: input:checked + label ... */
+  .pt-nav__toggle + .pt-nav__hamburger span:nth-child(1){ transform-origin:left center; }
+  .pt-nav__toggle + .pt-nav__hamburger span:nth-child(3){ transform-origin:left center; }
+
+  .pt-nav__toggle:checked + .pt-nav__hamburger span:nth-child(1){
+    transform: rotate(45deg) translate(3px, 2px);
+  }
+  .pt-nav__toggle:checked + .pt-nav__hamburger span:nth-child(2){
+    opacity: 0;
+  }
+  .pt-nav__toggle:checked + .pt-nav__hamburger span:nth-child(3){
+    transform: rotate(-45deg) translate(3px, -2px);
+  }
+
+  /* hide desktop-only menu items spacing */
+  .pt-nav__menu{ right:14px; }
+}
+
+/* even smaller screens - full width menu */
+@media (max-width:420px){
+  .pt-nav__menu{ width: calc(100% - 16px); right:8px; }
+  .pt-nav__wrap{ gap:8px; }
+  .pt-nav__title{ display:none; } /* hide text to save space if needed */
+}
+
+/* focus styles for keyboard users */
+.pt-nav__link:focus, .pt-btn:focus, .pt-nav__hamburger:focus{
+  outline: 3px solid rgba(47,111,78,0.12);
+  outline-offset: 2px;
+}

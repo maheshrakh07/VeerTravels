@@ -58,7 +58,33 @@
 </head>
 <body>
     <!-- Navigation - Loaded dynamically -->
-    <div id="navbar-container"></div>
+   <!-- Static responsive navbar (no JS) -->
+<nav class="pt-nav" role="navigation" aria-label="Main navigation">
+  <div class="pt-nav__wrap container">
+    <a class="pt-nav__brand" href="/">
+      <img src="/assets/images/logo.png" alt="Veer Tours & Travels" class="pt-nav__logo" onerror="this.style.display='none'">
+      <span class="pt-nav__title">Veer Tours & Travels</span>
+    </a>
+
+    <!-- CSS-only hamburger toggle -->
+    <input id="pt-nav-toggle" class="pt-nav__toggle" type="checkbox" aria-label="Toggle navigation menu">
+    <label for="pt-nav-toggle" class="pt-nav__hamburger" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </label>
+
+    <ul class="pt-nav__menu" id="ptNavMenu">
+      <li class="pt-nav__item"><a class="pt-nav__link" href="/">Home</a></li>
+      <li class="pt-nav__item"><a class="pt-nav__link" href="/pages/about.html">About</a></li>
+      <li class="pt-nav__item"><a class="pt-nav__link" href="/pages/services.html">Services</a></li>
+      <li class="pt-nav__item"><a class="pt-nav__link" href="/pages/tours.html">Tours</a></li>
+      <li class="pt-nav__item"><a class="pt-nav__link" href="/gallery">Gallery</a></li>
+      <li class="pt-nav__item"><a class="pt-nav__link" href="/testimonials.html">Testimonials</a></li>
+      <li class="pt-nav__item"><a class="pt-nav__link" href="/pages/contact.html">Contact</a></li>
+      
+    </ul>
+  </div>
+</nav>
+
 
     <!-- Hero Section -->
     <section id="home" class="hero">
