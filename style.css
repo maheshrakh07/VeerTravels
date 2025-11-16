@@ -554,3 +554,215 @@
   outline: 3px solid rgba(47,111,78,0.12);
   outline-offset: 2px;
 }
+
+
+
+/* === Veer Travels — Footer CSS === */
+
+.vt-footer {
+    background: #2f6f4e;
+    color: #ffffff;
+    padding: 50px 20px 28px;
+    margin-top: 40px;
+}
+
+.vt-container {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.vt-footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 26px;
+}
+
+.vt-footer-section h3,
+.vt-footer-section h4 {
+    margin: 0 0 12px;
+    font-weight: 700;
+}
+
+.vt-footer-section h3 {
+    font-size: 20px;
+}
+
+.vt-footer-section p {
+    margin: 6px 0;
+    color: rgba(255, 255, 255, 0.92);
+    line-height: 1.6;
+}
+
+.vt-footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vt-footer-section ul li {
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.vt-footer-section ul li a {
+    color: rgba(255, 255, 255, 0.95);
+    text-decoration: none;
+}
+
+.vt-footer-section ul li a:hover {
+    text-decoration: underline;
+    color: #ffb774;
+}
+
+.vt-footer-section i {
+    margin-right: 8px;
+}
+
+/* Footer Bottom */
+.vt-footer-bottom {
+    text-align: center;
+    margin-top: 34px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 16px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+    .vt-footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 560px) {
+    .vt-footer-content {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .vt-footer {
+        padding: 40px 16px 20px;
+    }
+}
+
+
+
+
+/* === Team Section (tm-) === */
+
+.tm-section {
+  padding: 60px 20px;
+  background: #faf6f2;
+  font-family: "Inter", sans-serif;
+}
+
+.tm-container {
+  max-width: 1180px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Heading */
+.tm-head h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #2f6f4e;
+  margin: 0;
+}
+.tm-divider {
+  width: 60px;
+  height: 6px;
+  background: linear-gradient(90deg, #ff9a2a, #ff7b2a);
+  margin: 14px auto;
+  border-radius: 4px;
+}
+.tm-head p {
+  color: #5f5f5f;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/* Cards Grid */
+.tm-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+/* Card */
+.tm-card {
+  background: #ffffff;
+  padding: 40px 24px;
+  border-radius: 14px;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.06);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.tm-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Photo */
+.tm-photo-wrap {
+  width: 130px;
+  height: 130px;
+  margin: auto;
+  border-radius: 50%;
+  border: 4px solid #ff9a2a;
+  overflow: hidden;
+}
+.tm-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text Content */
+.tm-name {
+  color: #2f6f4e;
+  font-size: 20px;
+  font-weight: 800;
+  margin-top: 18px;
+}
+.tm-role {
+  color: #444;
+  font-size: 14px;
+  margin-top: 4px;
+}
+.tm-desc {
+  margin-top: 14px;
+  color: #4b4b4b;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* Bottom Paragraph */
+.tm-bottom-text {
+  max-width: 800px;
+  margin: 40px auto 0;
+  color: #444;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .tm-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .tm-head h2 {
+    font-size: 26px;
+  }
+  .tm-card {
+    padding: 26px 18px;
+  }
+  .tm-bottom-text {
+    font-size: 13px;
+  }
+}

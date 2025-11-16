@@ -1,62 +1,62 @@
-// Main JavaScript - Application Entry Point
+// // Main JavaScript - Application Entry Point
 
-// Load footer component
-async function loadFooter() {
-    const footerHTML = `
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Veer Tours & Travels</h3>
-                    <p>Your Trusted Travel Partner Since 1988</p>
-                    <p style="margin-top: 15px;"><i class="fas fa-map-marker-alt"></i> Nashik, Maharashtra, India</p>
-                    <p style="margin-top: 10px;">Creating unforgettable travel memories for over 35 years</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="/index.html">Home</a></li>
-                        <li><a href="/pages/about.html">About Us</a></li>
-                        <li><a href="/pages/services.html">Services</a></li>
-                        <li><a href="/pages/tours.html">Tours</a></li>
-                        <li><a href="/pages/gallery.html">Gallery</a></li>
-                        <li><a href="/pages/testimonials.html">Testimonials</a></li>
-                        <li><a href="/pages/contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <ul>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+919422733366">+91 94227 33366</a></li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+919423462111">+91 94234 62111</a></li>
-                        <li><i class="fas fa-map-marker-alt"></i> Barde Complex, Tilak Road</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Shalimar, Nashik 422001</li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Our Services</h4>
-                    <ul>
-                        <li>Domestic Tours</li>
-                        <li>International Tours</li>
-                        <li>Visa & Passport Services</li>
-                        <li>Corporate Travel</li>
-                        <li>Educational Tours</li>
-                        <li>Currency Exchange</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Veer Tours & Travels. All rights reserved. | Your Travel Companion Since 1988</p>
-            </div>
-        </div>
-    </footer>
-    `;
+// // Load footer component
+// async function loadFooter() {
+//     const footerHTML = `
+//     <footer class="footer">
+//         <div class="container">
+//             <div class="footer-content">
+//                 <div class="footer-section">
+//                     <h3>Veer Tours & Travels</h3>
+//                     <p>Your Trusted Travel Partner Since 1988</p>
+//                     <p style="margin-top: 15px;"><i class="fas fa-map-marker-alt"></i> Nashik, Maharashtra, India</p>
+//                     <p style="margin-top: 10px;">Creating unforgettable travel memories for over 35 years</p>
+//                 </div>
+//                 <div class="footer-section">
+//                     <h4>Quick Links</h4>
+//                     <ul>
+//                         <li><a href="/index.html">Home</a></li>
+//                         <li><a href="/pages/about.html">About Us</a></li>
+//                         <li><a href="/pages/services.html">Services</a></li>
+//                         <li><a href="/pages/tours.html">Tours</a></li>
+//                         <li><a href="/pages/gallery.html">Gallery</a></li>
+//                         <li><a href="/pages/testimonials.html">Testimonials</a></li>
+//                         <li><a href="/pages/contact.html">Contact</a></li>
+//                     </ul>
+//                 </div>
+//                 <div class="footer-section">
+//                     <h4>Contact Info</h4>
+//                     <ul>
+//                         <li><i class="fas fa-phone"></i> <a href="tel:+919422733366">+91 94227 33366</a></li>
+//                         <li><i class="fas fa-phone"></i> <a href="tel:+919423462111">+91 94234 62111</a></li>
+//                         <li><i class="fas fa-map-marker-alt"></i> Barde Complex, Tilak Road</li>
+//                         <li><i class="fas fa-map-marker-alt"></i> Shalimar, Nashik 422001</li>
+//                     </ul>
+//                 </div>
+//                 <div class="footer-section">
+//                     <h4>Our Services</h4>
+//                     <ul>
+//                         <li>Domestic Tours</li>
+//                         <li>International Tours</li>
+//                         <li>Visa & Passport Services</li>
+//                         <li>Corporate Travel</li>
+//                         <li>Educational Tours</li>
+//                         <li>Currency Exchange</li>
+//                     </ul>
+//                 </div>
+//             </div>
+//             <div class="footer-bottom">
+//                 <p>&copy; 2025 Veer Tours & Travels. All rights reserved. | Your Travel Companion Since 1988</p>
+//             </div>
+//         </div>
+//     </footer>
+//     `;
 
-    const container = document.getElementById('footer-container');
-    if (container) {
-        container.innerHTML = footerHTML;
-    }
-}
+//     const container = document.getElementById('footer-container');
+//     if (container) {
+//         container.innerHTML = footerHTML;
+//     }
+// }
 
 // Load services data
 async function loadServices() {
